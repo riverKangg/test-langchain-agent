@@ -1,0 +1,40 @@
+agents:
+  - name: user_proxy
+    type: UserProxyAgent
+    config:
+      human_input_mode: TERMINAL
+      max_consecutive_auto_reply: 10
+
+  - name: planner
+    type: AssistantAgent
+    config:
+      llm_config:
+        model: gpt-4
+        temperature: 0
+
+  - name: shell_agent
+    type: AssistantAgent
+    config:
+      llm_config:
+        model: gpt-4
+        temperature: 0
+      code_execution_config:
+        use_docker: true  # Docker 실행을 활성화함
+
+functions:
+  - name: delegate_to_shell
+    type: message
+    config:
+      from: planner
+      to: shell_agent
+      condition: |
+        "폴더" in message or "파일" in message or "파이썬" in message
+      forward_message: true
+
+chat:
+  - from: user_proxy
+    to: planner
+    message: 현재 폴더 내의 파이썬 파일을 확인해줘.
+
+# autogenstudio ui --port 8080
+# https://docs.datastax.com/en/studio/reference/configuration-yaml.html
