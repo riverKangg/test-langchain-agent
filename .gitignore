@@ -195,4 +195,4 @@ cython_debug/
 
 
 # 포트폴리오
-./ai_interview_simulator/inputs/portfolio/*
+ai_interview_simulator/inputs/portfolio/*
