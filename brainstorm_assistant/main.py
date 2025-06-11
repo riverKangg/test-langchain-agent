@@ -20,7 +20,7 @@ if __name__ == "__main__":
 
     expanded = result.get("expanded", "(결과 없음)")
     critique = result.get("critique", "(결과 없음)")
-    mediated = result.get("mediated", "(결과 없음)")
+    selected = result.get("selected", "(결과 없음)")
     summary = result.get("summary", "(결과 없음)")
 
 
@@ -37,7 +37,7 @@ if __name__ == "__main__":
 {critique}
 
 ## 🧘‍♂️ 선택된 의견
-{mediated}
+{selected}
 
 ## 🧠 최종 요약 및 실행 제안
 {summary}
