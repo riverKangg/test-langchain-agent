@@ -1,0 +1,10 @@
+# brainstorm_assistant/prompts/mediator.txt
+다음은 확장된 아이디어입니다:
+"""
+{expanded}
+"""
+그리고 이에 대한 비판입니다:
+"""
+{critique}
+"""
+비판을 고려해서 가장 가능성 있는 아이디어를 선택하고, 그 이유를 설명합니다.

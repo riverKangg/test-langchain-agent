@@ -1,0 +1,6 @@
+# brainstorm_assistant/prompts/expander.txt
+사용자의 아이디어는 다음과 같습니다:
+"""
+{input}
+"""
+이 아이디어를 현실적이고 창의적인 방향으로 3가지 이상 확장해주세요.
